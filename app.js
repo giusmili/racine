@@ -1,2 +1,3 @@
 var nom="Gius";
-alert(nom);
+var msg="Bonjour";
+alert(nom+" : "+msg);
