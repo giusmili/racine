@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Menu</title>
+	<style type="text/css">
+	body {
+		font-family: sans-serif;
+		
+	}
+	.contenair{
+		width:80%;
+		margin: 150px auto 0;
+	}
+	h1{
+		font-weight:100;
+		width: 400px;
+		cursor:pointer;
+		
+	}
+
+	
+
+	/* ##################################################
+	BONUS:; TOOLTIP
+	################################################## */
+
+	a[data-tooltip],h1[data-tooltip] {
+		position: relative;
+		
+	}
+	a[data-tooltip]::after,h1[data-tooltip]::after  {
+		content: attr(data-tooltip);
+		position: absolute;
+		width: 200px;
+		line-height:35px;
+		bottom: 30px;
+		left: 50%;
+		margin-left: -100px;
+		padding: 5px;
+		color: #fff;
+		background-color: rgba(41, 128, 185,0.9);
+		display: none;
+		text-align: center;
+		border-radius: 4px;
+		font-size:80%;
+		text-transform:capitalize;
+		
+	}
+	a[data-tooltip]:hover::before, a[data-tooltip]:hover::after {
+		display: block;
+	}
+	h1[data-tooltip]:hover::before, h1[data-tooltip]:hover::after {
+		display: block;
+		
+	}
+	a[data-tooltip]::before,h1[data-tooltip]::before {
+		content: "";
+		display: none;
+		position: absolute;
+		width: 0;
+		height: 0;
+		bottom: 10px;
+		left: 50%;
+		margin-left: -10px;
+		border: 10px solid transparent;
+		border-top-color: rgba(41, 128, 185,0.9);
+		
+	}
+	</style>
+</head>
+<body>
+<div class="contenair">
+	<h1 data-tooltip="Info bulle">Tooltype info bulle</h1>
+	
+	<section>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac arcu tortor. Vivamus cursus tortor id ultrices auctor. Duis tincidunt in arcu vitae porta. Aliquam erat volutpat. Phasellus eu velit vel metus venenatis vulputate. Sed risus mi, molestie a nulla molestie, mollis venenatis est. Fusce nec egestas magna. Integer condimentum magna auctor fermentum condimentum. Sed eget ligula eget elit viverra accumsan eu nec nulla. Phasellus sit amet ipsum arcu. Nam ut velit ipsum. Mauris ullamcorper pharetra mi, ultrices tristique mauris viverra non. Aliquam eu nisl sodales neque posuere congue.</p>
+	<p>In lobortis laoreet leo eu scelerisque. Quisque egestas, turpis vel tristique fringilla, magna nibh venenatis lorem, ac porttitor turpis turpis vel velit. Suspendisse ut libero eleifend, malesuada est a, fringilla metus. Aliquam a risus quis libero semper sollicitudin quis sit amet dolor. Quisque egestas vulputate urna, dapibus pretium erat gravida at. Praesent ut justo ac nunc tincidunt pulvinar vel faucibus ligula. <a href="#" data-tooltip="texte du tooltip">Integer volutpat</a> varius risus, eu pharetra lacus semper a. Pellentesque lacus justo, tincidunt eu sem in, dapibus euismod mi. Quisque a leo at magna vulputate tincidunt. Nunc ipsum augue, cursus ut purus vel, lacinia consectetur tellus. Mauris pellentesque, sapien eget mollis laoreet, augue dui dapibus massa, id gravida lorem nulla quis risus. Sed commodo, erat at elementum semper, urna est lacinia mauris, eget lobortis leo justo fringilla nunc. Donec facilisis metus vel condimentum facilisis. Donec venenatis, felis a vestibulum sagittis, lectus ipsum iaculis turpis, non ultricies erat sem nec ante.</p>
+	<p>Sed sit amet sapien laoreet, sodales dui eu, tincidunt diam. Donec fermentum ligula sed diam aliquam, nec faucibus orci scelerisque. In id mauris nec ipsum euismod bibendum at nec mi. Vivamus tristique in augue a ullamcorper. Mauris lacinia varius congue. Sed sollicitudin lobortis interdum. Nullam placerat adipiscing consequat. Ut a tincidunt elit, eu commodo augue. <a href="#"  data-tooltip="Plus d'info">Allo!!!</a></p>
+	</section>
+</div>
+</body>
+</html>
