@@ -66,5 +66,16 @@
 
 
 	</p>
+	<script type="text/javascript">
+		var mynav=function(){
+			return "Vous êtes sur : ";
+		}
+		document.querySelector('p').innerHTML=mynav()+navigator.userAgent;
+		(function(){
+				var titre="Github - git";
+				document.title=titre;
+
+		})();
+	</script>
   </body>
 </html>
